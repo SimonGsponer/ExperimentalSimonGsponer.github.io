@@ -67,21 +67,6 @@ new Chart("myChart1", {
   }
 });
 
-new Chart("pieChart", config);
-
-const config = {
-  type: 'radar',
-  data: data,
-  options: {
-    elements: {
-      line: {
-        borderWidth: 3
-      }
-    }
-  },
-};
-
-
 const data = {
   labels: [
     'Management Consulting',
@@ -117,6 +102,19 @@ const data = {
   }]
 };
 
+const config = {
+  type: 'radar',
+  data: data,
+  options: {
+    elements: {
+      line: {
+        borderWidth: 3
+      }
+    }
+  },
+};
+
+new Chart("pieChart", config);
 
 
 </script>
