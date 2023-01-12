@@ -5,6 +5,8 @@
 <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 <p>Placeholder text</p>
 <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+<p>Placeholder text redux</p>
+<canvas id="pieChart" style="width:100%;max-width:600px"></canvas>
 <script>
 var xyValues = [
   {x:50, y:7},
@@ -64,6 +66,58 @@ new Chart("myChart1", {
     }
   }
 });
+
+new Chart("pieChart", config);
+
+const config = {
+  type: 'radar',
+  data: data,
+  options: {
+    elements: {
+      line: {
+        borderWidth: 3
+      }
+    }
+  },
+};
+
+
+const data = {
+  labels: [
+    'Management Consulting',
+    'Pre-Sales & Sales',
+    'Project & People Management',
+    'Frontend, Visualisations, Design',
+    'Python-based Software Engineering',
+    'Continuously Acquiring new Technical Skills',
+    'Machine Learning & Data Science',
+    'Cloud-native Development',
+    'Public Speaking & Recognised Open Source Contributions'
+  ],
+  datasets: [{
+    label: 'How I used to spend my time.',
+    data: [4, 4, 6, 3, 7, 4, 7, 3, 2],
+    fill: true,
+    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+    borderColor: 'rgb(255, 99, 132)',
+    pointBackgroundColor: 'rgb(255, 99, 132)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(255, 99, 132)'
+  }, {
+    label: 'How I want to spend my time.',
+    data: [1, 0, 3, 3, 7, 6, 7, 7, 4],
+    fill: true,
+    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+    borderColor: 'rgb(54, 162, 235)',
+    pointBackgroundColor: 'rgb(54, 162, 235)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(54, 162, 235)'
+  }]
+};
+
+
 
 </script>
 
